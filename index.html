@@ -135,9 +135,37 @@ To conclude, physics is a very important component in order to have the best vid
     Lee K. Farquhar and Robert Meeds  (2007). Types of Fantasy Sports Users and Their Motivations. 
   </p>
   <p class="ex1">
-    Won Seo and Chrstine Green (2008). Development of the Motivication Scale for Sport Online Consumption. 
+    Won Seo and Chrstine Green (2008). Development of the Motivication Scale for Sport Online Consumption
+  </p>
 
-    
-                                                                                                                                                                                
-  
-    
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
+<!-- /////////////////////////// Adding last update //////////////////////////////// -->
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
+
+<div id="last-updated">Loading last update time...</div>
+
+<!-- Verify Button -->
+<button onclick="verifyLastUpdatedTime()" style="display: block; margin: 10px auto; padding: 8px 16px:">
+    Verify Last Modified Time
+</button>
+
+<script> 
+    async function getLastUpdatedTime() {
+        const username = 'RS02375';
+        const repo = 'FY6857532';
+
+        const url = 'https:api.github.com/repos/${username}/${repo}/commits';
+
+        try {
+            const repsonse = await fetch(url, {
+                method: 'GET'
+                headers: {
+                    'Accept': 'application/vnd.github.v3+json',
+                      }
+        });
+             if (!response.ok) {
+               throw new Error('Error fetching data: ${response.status} - ${response.statusText}');
+             }
+
+            const commits = await response.json();
+            if (commits
