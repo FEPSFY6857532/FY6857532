@@ -115,11 +115,37 @@ Escape - Escape involves taking a mental break from regular daily concerns of fa
 Entertainment - Entertainment regards excitement and amusement in the consumption (Seo & Green, 2008). Entertainment is often related to pure pleasure of the act of consumption (Farquhar & Meeds, 2007).
 For people of younger ages a lot of them spend a lot of hours on video games which is summarised in the table below. This further emphasises how video games are very important for people.
 
-  function drawChart() {
-    var data = google.visualization.arrayToDataTable([
-            ['Task','Hours per Day'],
-            ['Less than an hour',40.1],
-            ['',8],
+ </head>
+
+  <title>Hours Spent on Video Games</title>
+
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+       <div id="piechart" style="width: 900px; height: 500px;"></div>
+
+  google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Percentage'],
+          ['Less than 1 hour', 40.1],
+          ['1-2 hours', 27.1],
+          ['2-3 hours', 14.6],
+          ['3-4 hours', 9.0],
+          ['4-6 hours', 6.5],
+          ['Over 6 hours', 2.8]
+        ]);
+
+        var options = {
+          title: 'My Daily Activities'
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+        chart.draw(data, options);
+      }
+    </script>
     
   </p>
     
@@ -153,38 +179,6 @@ To conclude, physics is a very important component in order to have the best vid
   <p class="ex1">
     Kozu Masataka (2020). Taking a Serious Look at Gaming Addiction. Available at: https://www3.nhk.or.jp/nhkworld/vi/news/backstories/787/
   </p>
-
-  </head>
-
-  <title>Hours Spent on Video Games</title>
-
-  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-       <div id="piechart" style="width: 900px; height: 500px;"></div>
-
-  google.charts.load('current', {'packages':['corechart']});
-      google.charts.setOnLoadCallback(drawChart);
-
-      function drawChart() {
-
-        var data = google.visualization.arrayToDataTable([
-          ['Task', 'Percentage'],
-          ['Less than 1 hour', 40.1],
-          ['1-2 hours', 27.1],
-          ['2-3 hours', 14.6],
-          ['3-4 hours', 9.0],
-          ['4-6 hours', 6.5],
-          ['Over 6 hours', 2.8]
-        ]);
-
-        var options = {
-          title: 'My Daily Activities'
-        };
-
-        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
-
-        chart.draw(data, options);
-      }
-    </script>
       
 <video src="video 2 (1).mp4" width="800" height="450" controls>
 </video>
