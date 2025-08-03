@@ -137,57 +137,6 @@ For people of younger ages a lot of them spend a lot of hours on video games whi
   <div id="Pie chart showing hours spent on video games text">
   <p class="ex1">
     
-  <meta charset="UTF-8">
-  <title>Pie Chart Example</title>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <style>
-    body {
-      font-family: sans-serif;
-      display: flex;
-      margin-top: 50px;
-    }
-    canvas {
-      max-width: 400px;
-    }
-  </style>
-</head>
-<body>
-
-<h2>My Pie Chart</h2>
-<canvas id="myPieChart"></canvas>
-
-<script>
-  const ctx = document.getElementById('myPieChart').getContext('2d');
-  const data = {
-    labels: ['Red', 'Blue', 'Yellow', 'Green'],
-    datasets: [{
-      label: 'Color Distribution',
-      data: [25, 35, 20, 20],
-      backgroundColor: ['red', 'blue', 'yellow', 'green'],
-      borderColor: 'white',
-      borderWidth: 2
-    }]
-  };
-
-  const config = {
-    type: 'pie',
-    data: data,
-    options: {
-      responsive: true,
-      plugins: {
-        legend: {
-          position: 'bottom'
-        }
-      }
-    }
-  };
-
-  new Chart(ctx, config);
-</script>
-    
-  </p>
-    
-
   <p class="ex1">
     Conclusion
   </p>
