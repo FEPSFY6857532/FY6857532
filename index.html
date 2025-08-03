@@ -134,37 +134,60 @@ Entertainment - Entertainment regards excitement and amusement in the consumptio
   <p class="ex1">
 For people of younger ages a lot of them spend a lot of hours on video games which is summarised in the table below. This further emphasises how video games are very important for people.
 
- </head>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pie Chart Example</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      font-family: sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 50px;
+    }
+    canvas {
+      max-width: 400px;
+    }
+  </style>
+</head>
+<body>
 
-  <title>Hours Spent on Video Games</title>
+<h2>My Pie Chart</h2>
+<canvas id="myPieChart"></canvas>
 
-  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-       <div id="piechart" style="width: 900px; height: 500px;"></div>
+<script>
+  const ctx = document.getElementById('myPieChart').getContext('2d');
+  const data = {
+    labels: ['Red', 'Blue', 'Yellow', 'Green'],
+    datasets: [{
+      label: 'Color Distribution',
+      data: [25, 35, 20, 20],
+      backgroundColor: ['red', 'blue', 'yellow', 'green'],
+      borderColor: 'white',
+      borderWidth: 2
+    }]
+  };
 
-  google.charts.load('current', {'packages':['corechart']});
-      google.charts.setOnLoadCallback(drawChart);
-
-      function drawChart() {
-
-        var data = google.visualization.arrayToDataTable([
-          ['Task', 'Percentage'],
-          ['Less than 1 hour', 40.1],
-          ['1-2 hours', 27.1],
-          ['2-3 hours', 14.6],
-          ['3-4 hours', 9.0],
-          ['4-6 hours', 6.5],
-          ['Over 6 hours', 2.8]
-        ]);
-
-        var options = {
-          title: 'My Daily Activities'
-        };
-
-        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
-
-        chart.draw(data, options);
+  const config = {
+    type: 'pie',
+    data: data,
+    options: {
+      responsive: true,
+      plugins: {
+        legend: {
+          position: 'bottom'
+        }
       }
-    </script>
+    }
+  };
+
+  new Chart(ctx, config);
+</script>
+
+</body>
+</html>
     
   </p>
     
