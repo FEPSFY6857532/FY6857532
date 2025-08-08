@@ -83,8 +83,8 @@ p.ex1 {
   </p>
   </div>
 
-<h3 id="Article">Article</h3>
-  <div id="ArticleText">
+<h3 id="Analysis">Analysis and Discussion</h3>
+  <div id="Analysis">
   <p class="ex1">
     Newton’s Laws in Physics
 
@@ -248,8 +248,7 @@ To conclude, physics is a very important component in order to have the best vid
     window.onload = getLastUpdatedTime;
 </script>
 
-
- <!-- //////////////////////////////////////////////////////////////////////////////// -->
+<!-- //////////////////////////////////////////////////////////////////////////////// -->
   <!-- ////////////////////////////// Word count function ////////////////////////////// -->
   <!-- //////////////////////////////////////////////////////////////////////////////// -->
 <!-- Placeholder for total word count -->
@@ -271,10 +270,9 @@ To conclude, physics is a very important component in order to have the best vid
   function displayTotalWordCount() {
     // Calculate word count for each section and accumulate the total
     const IntroductionCount = displayWordCount("Introduction_InText");
-    const AbstractCount = displayWordCount("Abstract_InText");
-    const ArticleCount = displayWordCount("Article_InText");
+    const AnalysisCount = displayWordCount("Analysis_InText");
     // Calculate the sum of all selected sections
-    const totalWordCount = IntroductionCount + AbstractCount + ArticleCount;
+    const totalWordCount = IntroductionCount + AnalysisCount;
     // Display the total word count
     document.getElementById("totalWordCount").innerText = `Total word count: ${totalWordCount}`;
   }
